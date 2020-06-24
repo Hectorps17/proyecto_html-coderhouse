@@ -1,0 +1,274 @@
+/*fonts*/
+body {
+  font-family: "Roboto";
+  margin: 0;
+  padding: 0;
+  background: #252850; }
+
+.cursiva {
+  font-family: "Merriweather";
+  font-style: italic; }
+
+.monospace {
+  font-family: monospace; }
+
+/*colores*/
+.color-blanco {
+  color: white; }
+
+.color-negro {
+  color: black; }
+
+.color-morado {
+  color: #924e7d; }
+
+.color-azul {
+  color: blue; }
+
+.color-rojo {
+  color: #cc0000; }
+
+.color-amarillo {
+  color: yellow; }
+
+.color-verde {
+  color: #00cc00; }
+
+.negrita {
+  font-weight: bolder; }
+
+.suavizado {
+  font-weight: lighter; }
+
+ul {
+  color: white; }
+
+.card {
+  background-color: blue; }
+
+.bg-light {
+  background-color: transparent !important; }
+
+/*Margenes y gradiente*/
+#pie-de-pagina1 {
+  margin-top: 1.3rem;
+  font-size: 18.4px; }
+
+#pie-de-pagina2 {
+  margin-top: 68px;
+  font-size: 17.5px; }
+
+#pie-de-pagina3 {
+  margin-top: 5rem;
+  font-size: 18px; }
+
+#pie-de-pagina4 {
+  margin-top: 4rem;
+  font-size: 17px; }
+
+#pie-de-pagina5 {
+  margin-top: 4rem;
+  font-size: 18px; }
+
+.distancia-1 {
+  margin-bottom: 3rem; }
+
+.distancia-2 {
+  margin-bottom: 1.5rem; }
+
+.distancia-3 {
+  margin-bottom: 2rem; }
+
+.titulos {
+  margin-top: 1rem;
+  margin-bottom: 2rem; }
+
+.copyright {
+  font-size: 20px;
+  margin-top: 1.4rem;
+  padding: 10px;
+  margin-bottom: 0;
+  background-color: #fceabb;
+  background: -webkit-linear-gradient(top, #fceabb 0%, #fccd4d 50%, #f8b500 51%, #fbdf93 100%);
+  background: linear-gradient(to bottom, #fceabb 0%, #fccd4d 50%, #f8b500 51%, #fbdf93 100%);
+  filter: startColorstr="#fceabb", endColorstr="#fbdf93", GradientType=0; }
+
+/*Grid y Flexbox*/
+.grid {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 160px 59px;
+  grid-template-areas: "logo nombre nombre" "eslogan eslogan buscador" "menu menu menu";
+  justify-items: stretch;
+  background: #020024;
+  background: linear-gradient(0deg, #020024 0%, #090979 10%, #01eae0 90%, #00d4ff 100%); }
+  .grid img {
+    grid-area: logo;
+    align-items: center;
+    width: 190px;
+    height: 190px; }
+  .grid h1 {
+    grid-area: nombre;
+    justify-content: center;
+    margin: 0;
+    align-self: center;
+    font-size: 27vh; }
+  .grid div nav {
+    grid-area: buscador;
+    justify-content: center;
+    margin: 0;
+    align-self: right; }
+  .grid h2 {
+    grid-area: eslogan;
+    font-size: 30px;
+    margin-top: 29px; }
+  .grid nav {
+    grid-area: menu; }
+
+.menu ul {
+  display: flex;
+  justify-content: center;
+  margin: 0px;
+  background-color: #0033ff;
+  padding: 0;
+  width: auto;
+  flex-wrap: wrap; }
+  .menu ul li {
+    font-size: 2vw; }
+  .menu ul a {
+    color: #fff;
+    font-weight: normal;
+    text-decoration: none; }
+  .menu ul :hover {
+    color: black;
+    width: auto; }
+  .menu ul li + li {
+    margin-left: 16%; }
+
+/*miscelanea*/
+li {
+  display: block;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem; }
+
+#todas-las-noticias {
+  margin-top: 2rem;
+  width: auto; }
+
+.png {
+  width: 10%; }
+
+/*responsive*/
+@media (min-width: 240px) and (max-width: 575px) {
+  .menu ul li + li {
+    margin-left: 10vw; }
+  .menu ul li {
+    font-size: 6.4vw; }
+  .grid {
+    grid-template-areas: "logo nombre nombre" "eslogan eslogan eslogan" "menu menu menu";
+    grid-template-rows: auto; }
+    .grid h2 {
+      font-size: 8vw;
+      margin-top: 0px; }
+    .grid .logo {
+      width: 45vw;
+      height: 55vw; }
+    .grid h1 {
+      font-size: 12vw; }
+    .grid div {
+      display: none; }
+  body {
+    font-size: 6.3vw; }
+  h3 {
+    font-size: 6.4vw; }
+  #pie-de-pagina1 {
+    margin-top: 0;
+    font-size: 3.5vw; }
+  #pie-de-pagina2 {
+    margin-top: 0;
+    font-size: 3.5vw; }
+  #pie-de-pagina3 {
+    margin-top: 0;
+    font-size: 4vw; }
+  #pie-de-pagina4 {
+    margin-top: 5vw;
+    font-size: 4vw; }
+  #pie-de-pagina5 {
+    margin-top: 0;
+    font-size: 3.5vw; }
+  .btn {
+    font-size: 6vw; }
+  .menor-fuente {
+    font-size: 5.5vw; }
+  .png {
+    width: 30%; } }
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .menu ul li + li {
+    margin-left: 9%; }
+  .menu ul li {
+    font-size: 2.5vw; }
+  .grid {
+    grid-template-rows: 160px auto; }
+    .grid h2 {
+      font-size: 3.2vw;
+      margin-top: 1px; }
+    .grid .logo {
+      width: 22vw;
+      height: 30vh; }
+    .grid h1 {
+      font-size: 15vh; }
+  .navbar {
+    padding: 0px; }
+    .navbar .btn {
+      padding: .2rem 0.5rem; }
+    .navbar .my-2 {
+      margin: 0 !important; }
+  .navbar-toggler {
+    padding: 0px; }
+  .form-inline .form-control {
+    height: calc(1.2em + .7rem + 1.5px);
+    width: 25vw; }
+  body {
+    font-size: 4vh; }
+  .png {
+    width: 20%; } }
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .menu ul li + li {
+    margin-left: 9%; }
+  .menu ul li {
+    font-size: 2.5vw; }
+  .grid {
+    grid-template-rows: auto auto; }
+    .grid h2 {
+      font-size: 3.25vw;
+      margin-top: 18px;
+      margin-bottom: 0; }
+    .grid .logo {
+      width: 170px;
+      height: 170px; }
+    .grid h1 {
+      font-size: 13vw; }
+  .navbar {
+    padding: 0px; }
+    .navbar .btn {
+      padding: .2rem 0.5rem; }
+    .navbar .form-inline {
+      margin-top: 1rem !important;
+      margin-bottom: 0rem !important; }
+  .navbar-toggler {
+    padding: 0px;
+    display: none; }
+  .form-control {
+    height: calc(1.2em + .7rem + 1.5px); }
+  body {
+    font-size: 4vh; } }
+
+@media (min-width: 992px) {
+  .menu ul li + li {
+    margin-left: 12%; }
+  body {
+    font-size: 2vw; }
+  .grid h1 {
+    font-size: 14vw; } }

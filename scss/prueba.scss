@@ -1,0 +1,141 @@
+/*fonts*/
+
+body {font-family: "Roboto"; margin: 0; padding: 0;  background:#252850;}
+.cursiva {font-family: "Merriweather"; font-style: italic;}
+.monospace {font-family: monospace;}
+
+/*colores*/
+@for $i from 1 through 7 {}
+$colors: (
+    blanco: white,
+    negro: black,
+    morado: #924e7d,
+    azul: blue,
+    rojo: #cc0000,
+    amarillo: yellow,
+    verde: #00cc00
+);
+@each $llave, $valor in $colors {
+    .color-#{$llave} {color: $valor;}
+}
+.negrita {font-weight: bolder;}
+.suavizado {font-weight: lighter;}
+ul {color: white;}
+.card {background-color: blue;}
+.bg-light {background-color: transparent !important;}
+
+/*Margenes y gradiente*/
+@for $i from 1 through 5 {}
+$pies-de-pagina: (
+    1: (1.3rem, 18.4px),
+    2: (68px, 17.5px),
+    3: (5rem, 18px),
+    4: (4rem, 17px),
+    5: (4rem, 18px)
+);
+@each $key, $value in $pies-de-pagina {
+    $margen-superior: nth($value, 1); $fuente: nth($value, 2);
+     #pie-de-pagina#{$key} {
+        margin-top: $margen-superior;
+        font-size: $fuente;
+      }  
+}
+@for $i from 1 through 3 {}
+$distancia: (
+    1: 3rem,
+    2: 1.5rem,
+    3: 2rem
+);
+@each $numero, $rems in $distancia {
+    .distancia-#{$numero} {margin-bottom: $rems;}
+}
+.titulos {margin-top: 1rem; margin-bottom: 2rem;}
+.copyright {font-size: 20px; margin-top: 1.4rem;padding: 10px; margin-bottom: 0;background-color: rgba(252,234,187,1);
+background: -webkit-linear-gradient(top, rgba(252,234,187,1) 0%, rgba(252,205,77,1) 50%, rgba(248,181,0,1) 51%, rgba(251,223,147,1) 100%);
+background: linear-gradient(to bottom, rgba(252,234,187,1) 0%, rgba(252,205,77,1) 50%, rgba(248,181,0,1) 51%, rgba(251,223,147,1) 100%);
+filter: ( startColorstr='#fceabb', endColorstr='#fbdf93', GradientType=0 );}
+
+/*Grid y Flexbox*/
+.grid {display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 160px 59px;
+    grid-template-areas: 
+    "logo nombre nombre"
+    "eslogan eslogan buscador"
+    "menu menu menu";
+    justify-items: stretch;
+    background: rgb(2,0,36);
+    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 10%, rgba(1,234,224,1) 90%, rgba(0,212,255,1) 100%);
+    img {grid-area: logo; align-items: center; width: 190px; height: 190px;}
+    h1 {grid-area: nombre; justify-content: center; margin: 0; align-self: center; font-size: 27vh;}
+    div nav {grid-area: buscador; justify-content: center; margin: 0; align-self: right;}
+    h2 {grid-area: eslogan; font-size: 30px; margin-top: 29px;}
+    nav {grid-area: menu;}}
+.menu ul {display: flex; justify-content: center; margin: 0px;background-color:#0033ff; padding: 0; width: auto; flex-wrap: wrap;
+    li {font-size: 2vw;}
+        a {color: #fff; font-weight: normal; text-decoration: none;}
+            :hover {color: black; width: auto;}
+    li + li {margin-left: 16%;}}
+
+/*miscelanea*/
+li {display: block;margin-top: 0.5rem; margin-bottom: 0.5rem;}
+#todas-las-noticias {margin-top: 2rem; width: auto;}
+.png {width: 10%;}
+
+/*responsive*/
+@media (min-width: 240px) and (max-width: 575px)
+{.menu ul {
+    li + li {margin-left: 10vw;}
+    li {font-size: 6.4vw;}}
+.grid {grid-template-areas: "logo nombre nombre" "eslogan eslogan eslogan" "menu menu menu"; grid-template-rows: auto ;
+    h2 {font-size: 8vw; margin-top: 0px;}
+    .logo {width: 45vw; height: 55vw;}
+    h1 {font-size: 12vw;}
+    div {display: none;}}
+body {font-size: 6.3vw;}
+h3 {font-size: 6.4vw;}
+#pie-de-pagina1 {margin-top: 0; font-size: 3.5vw;}
+#pie-de-pagina2 {margin-top: 0; font-size: 3.5vw;}
+#pie-de-pagina3 {margin-top: 0; font-size: 4vw;}
+#pie-de-pagina4 {margin-top: 5vw; font-size: 4vw;}
+#pie-de-pagina5 {margin-top: 0; font-size: 3.5vw;}
+.btn {font-size: 6vw;} 
+.menor-fuente {font-size: 5.5vw;} 
+.png {width: 30%;} }
+
+@media (min-width: 576px) and (max-width: 767px)
+{.menu ul {
+    li + li {margin-left: 9%;}
+    li {font-size: 2.5vw;}}
+.grid {grid-template-rows: 160px auto;
+    h2 {font-size: 3.2vw; margin-top: 1px;}
+    .logo {width: 22vw; height: 30vh;}
+    h1 {font-size: 15vh;}}
+.navbar {padding: 0px;
+    .btn {padding: .2rem 0.5rem;}
+    .my-2  {margin: 0 !important;}}
+.navbar-toggler {padding: 0px;}
+.form-inline .form-control
+{height: calc(1.2em + .7rem + 1.5px); width: 25vw;}
+body {font-size: 4vh;}
+.png {width: 20%;}}
+
+@media (min-width: 768px) and (max-width: 991px)
+{.menu ul {
+    li + li {margin-left: 9%;}
+    li {font-size: 2.5vw;}}
+.grid {grid-template-rows: auto auto;
+    h2 {font-size: 3.25vw; margin-top: 18px; margin-bottom: 0;}
+    .logo {width: 170px; height: 170px;}
+    h1 {font-size: 13vw;}}
+.navbar {padding: 0px;
+    .btn {padding: .2rem 0.5rem;}
+    .form-inline {margin-top: 1rem !important; margin-bottom: 0rem !important}}
+.navbar-toggler {padding: 0px; display: none;}
+.form-control {height: calc(1.2em + .7rem + 1.5px);}
+body {font-size: 4vh;} }
+
+@media (min-width: 992px)
+{.menu ul li + li {margin-left: 12%;}
+body {font-size: 2vw;}
+.grid h1 {font-size: 14vw;} }
