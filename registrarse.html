@@ -11,79 +11,88 @@
 	<link rel="stylesheet" type="text/css" href="css/estilos.css">
 </head>
 <body>
-    <header class="grid">
-	    <img class= "logo" src="pngs/chivo.png" alt="Chivo">
-	    <h1 class="nombre color-negro"> El Chivatazo </h1>
-        <div>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">        
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            </button>
-            <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="Search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
-        </div>
-		<h2 class="eslogan color-negro suavizado cursiva"> El editorial de la razón latinoamericana </h2>
-    	    <nav class="menu">
-	            <ul>
-		            <li><a href="index.html">Inicio</a></li>
-		            <li><a href="noticias.html">Noticias</a></li>
-		            <li><a href="redes-sociales.html">Contáctanos</a></li>
-		            <li><a href="registrarse.html">Registrarse</a></li>
-		            <li><a href="ayuda.html">Ayuda</a></li>
-	            </ul>
-	        </nav>
-    </header>
-    <div class="color-blanco">
-	    <h3 id="distancia-1" class="color-rojo titulos negrita">Cree un perfil, y disfrute de todas las noticias que tenemos para ofrecer</h3>
-	        <form action= "#" method="POST">
-	        <div>	
-	            <label for="name">Nombre:</label>
-	            <input class="distancia-2" id="name" placeholder="Juan Carlos" type="text" required>
-	        </div>
-	        <div>
-	            <label class="" for="last name">Apellido:</label>
-	            <input class="distancia-2" id="last name" placeholder="Barrieto Sola" type="text" required>
-	        </div>
-	        <div>
-	            <label for="email">Email:</label>
-	            <input class="distancia-2" id= "email" placeholder="email@ejemplo.com" type="email" required>
-	        </div>
+	<div class="grid">
+        <header class="menu-grid header">
+    	    <img class= "logo" src="pngs/chivo.png" alt="Chivo">
+    	    <h1 class="nombre color-negro"> El Chivatazo </h1>
             <div>
-	            <label for="Gender">Sexo:</label>
-	            <select class="distancia-2" name="Género" id="Gender">
-	                <option>Hombre</option>
-	          	    <option>Mujer</option>
-	            </select>
-	        </div>
-	        <div>
-	          	<input class="distancia-3" value="Si" type="checkbox" name="acepto" required><a href="">Acepta recibir notificaciones de "El Chivazo"</a>
-	        </div>
-	            <input type="reset" value="Borrar todos los campos" class="btn btn-danger">
-	            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                Listo
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">        
+    			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 </button>
-                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">¿Estás seguro de registrarte?</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                               <p>Una vez registrado, te quedarás con tu nombre y tu email para siempre, y no podrá ser cambiado ni modificado en el futuro</p>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">No, olvídalo</button>
-                                <button type="button" class="btn btn-primary">Sí, seguro</button>
+                <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="Search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+    		<h2 class="eslogan color-negro suavizado cursiva"> El editorial de la razón latinoamericana </h2>
+        	    <nav class="menu">
+    	            <ul>
+    		            <li><a href="index.html">Inicio</a></li>
+    		            <li><a href="noticias.html">Noticias</a></li>
+    		            <li><a href="redes-sociales.html">Contáctanos</a></li>
+    		            <li><a href="registrarse.html">Registrarse</a></li>
+    		            <li><a href="ayuda.html">Ayuda</a></li>
+    	            </ul>
+    	        </nav>
+        </header>
+        <section class="color-blanco texto">
+    	    <h3 id="distancia-1" class="color-rojo titulos negrita">Cree un perfil, y disfrute de todas las noticias que tenemos para ofrecer</h3>
+    	        <form action= "#" method="POST">
+    	        <div>	
+    	            <label for="name">Nombre:</label>
+    	            <input class="distancia-2" id="name" placeholder="Juan Carlos" type="text" required>
+    	        </div>
+    	        <div>
+    	            <label class="" for="last name">Apellido:</label>
+    	            <input class="distancia-2" id="last name" placeholder="Barrieto Sola" type="text" required>
+    	        </div>
+    	        <div>
+    	            <label for="gmail">Email:</label>
+    	            <input class="distancia-2" id= "gmail" placeholder="email@ejemplo.com" type="email" required>
+				</div>
+				<div>	
+    	            <label for="password">Contraseña:</label>
+    	            <input class="distancia-2" id="password" placeholder="h15oJneBof0MBs" type="text" required>
+    	        </div>
+                <div>
+    	            <label for="Gender">Sexo:</label>
+    	            <select class="distancia-2" name="Género" id="Gender">
+    	                <option>Hombre</option>
+    	          	    <option>Mujer</option>
+    	            </select>
+    	        </div>
+    	        <div>
+    	          	<input class="distancia-3" value="Si" type="checkbox" name="acepto" required><a href="" class="notificaciones">Acepta recibir notificaciones de "El Chivazo"</a>
+				</div>
+    	            <input type="reset" value="Borrar todos los campos" class="btn btn-danger">
+    	            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    Listo
+                    </button>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title color-negro" id="exampleModalLabel">¿Estás seguro de registrarte?</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                   <p class="color-negro">Una vez registrado, te quedarás con tu nombre y tu email para siempre, y no podrá ser cambiado ni modificado en el futuro</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">No, olvídalo</button>
+                                    <input type="submit" class="btn btn-primary" value="Estoy seguro">
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-	        </form>
-	</div>
+    	        </form>
+		</section>
+		<a href="https://fravegacatalogo.com/electro-sale/">
+		<img class="publicidad" src="pngs/publicidad.png" alt="publicidad">
+		</a>
+    </div>
 	<div>
 	    <footer>
 		<p id="pie-de-pagina4" class="color-morado negrita monospace copyright">©Copyright, todos los derechos reservados</p>

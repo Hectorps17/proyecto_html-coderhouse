@@ -11,39 +11,64 @@
 	<link rel="stylesheet" type="text/css" href="css/estilos.css">
 </head>
 <body>
-    <header class="grid">
-	    <img class= "logo" src="pngs/chivo.png" alt="Chivo">
-		<h1 class="nombre color-negro"> El Chivatazo </h1>
-        <div>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">        
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            </button>
-            <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="Search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
-        </div>
-	    <h2 class="eslogan color-negro suavizado cursiva"> El editorial de la razón latinoamericana </h2>
-    	    <nav class="menu">
-	            <ul>
-		            <li><a href="index.html">Inicio</a></li>
-		            <li><a href="noticias.html">Noticias</a></li>
-		            <li><a href="redes-sociales.html">Contáctanos</a></li>
-		            <li><a href="registrarse.html">Registrarse</a></li>
-		            <li><a href="ayuda.html">Ayuda</a></li>
-	            </ul>
-	        </nav>
-    </header>
-    <div>
-	    <h3 class="color-verde titulos"> Preguntas Frecuentes</h3>
-	        <ul>
-	        	<li>¿Cómo puedo contactarme con ustedes?</li>
-	        	<p class="color-blanco">Nuestras redes sociales están <a href="redes sociales.html">aquí</a></p>
-	        	<li>¿Cómo me puedo enterar de todas las noticias de "El Chivatazo"?</li> 
-	        	<p class="color-blanco">Activando las notificaciones y registrándote <a href="Registrarse.html">aquí</a></p>	
-	        	<li>¿Existe una versión en papel de "El Chivatazo"?</li>
-	        	<p class="color-blanco">No, a fecha de hoy solo existe la versión electrónica de "El Chivatazo"</p>
-	        </ul>
+	<div class="grid">
+        <header class="menu-grid header">
+    	    <img class= "logo" src="pngs/chivo.png" alt="Chivo">
+    		<h1 class="nombre color-negro"> El Chivatazo </h1>
+            <div>
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">        
+    			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                </button>
+                <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="Search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+    	    <h2 class="eslogan color-negro suavizado cursiva"> El editorial de la razón latinoamericana </h2>
+        	    <nav class="menu">
+    	            <ul>
+    		            <li><a href="index.html">Inicio</a></li>
+    		            <li><a href="noticias.html">Noticias</a></li>
+    		            <li><a href="redes-sociales.html">Contáctanos</a></li>
+    		            <li><a href="registrarse.html">Registrarse</a></li>
+    		            <li><a href="ayuda.html">Ayuda</a></li>
+    	            </ul>
+    	        </nav>
+        </header>
+        <section class="texto">
+    	    <h3 class="color-verde titulos">Preguntas Frecuentes</h3>
+    	        <ul class="color-blanco">
+    	        	<li class="negrita">¿Cómo puedo contactarme con ustedes?</li>
+					<li class="distancia-1">Nuestras redes sociales están <a href="redes sociales.html">aquí</a></li>
+    	        	<li class="negrita">¿Cómo me puedo enterar de todas las noticias de "El Chivatazo"?</li> 
+					<li class="distancia-1">Activando las notificaciones y <br> registrándote <a href="Registrarse.html">aquí</a></li>
+    	        	<li class="negrita">¿Existe una versión en papel de "El Chivatazo"?</li>
+					<li class="distancia-1">No, a fecha de hoy solo existe la versión electrónica de "El Chivatazo"</li>
+					<li class="negrita">Quiero o necesito ayuda presencial</li>
+					<li class="distancia-1">
+						<p>En caso de necesitar interactuar con nosotros directamente, puedes acudir <br> a nuestras oficinas principales</p>
+						<iframe id="oficinas" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.3968002835672!2d-103.98776758551651!3d23.73322549535018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x869b68ddc2c19513%3A0xe67a91643934fc27!2sTaqueria%20%22El%20Chivatazo%22!5e0!3m2!1ses-419!2sar!4v1594438178396!5m2!1ses-419!2sar" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+					</li>
+					<li class="negrita">Tengo algún tipo de problema con el sitio web</li>
+					<li class="distancia-1">Completa éste cuestionario, explícanos tu problema y nosotros lo solucionaremos </li>
+				</ul>
+				<form class="encuesta" action= "#" method="POST">
+					<div>
+						<label class="color-blanco" for="email">Email:</label>
+						<br>
+						<input class="distancia-2" id= "email" placeholder="email@ejemplo.com" type="email" required>
+					</div>
+					<div>
+						<label class="color-blanco" for="problema">Mensaje:</label>
+						<br>
+						<textarea class="distancia-2" id="problema" placeholder="Problema" required></textarea>
+					</div>
+				</form>
+				
+		</section>
+    	<a href="https://fravegacatalogo.com/electro-sale/">
+		<img class="publicidad" src="pngs/publicidad.png" alt="publicidad">
+		</a>
 	</div>
     <div>
 	    <footer>

@@ -34,40 +34,46 @@ body {
 .color-verde {
   color: #00cc00; }
 
+.color-gris {
+  color: gray; }
+
 .negrita {
   font-weight: bolder; }
 
 .suavizado {
   font-weight: lighter; }
 
-ul {
-  color: white; }
-
 .card {
   background-color: blue; }
+
+.clase-para-los-p p {
+  color: gray; }
 
 .bg-light {
   background-color: transparent !important; }
 
+#azul-link {
+  color: #007bff; }
+
 /*Margenes y gradiente*/
 #pie-de-pagina1 {
-  margin-top: 1.3rem;
+  margin-top: 0;
   font-size: 18.4px; }
 
 #pie-de-pagina2 {
-  margin-top: 68px;
+  margin-top: 0;
   font-size: 17.5px; }
 
 #pie-de-pagina3 {
-  margin-top: 5rem;
+  margin-top: 0;
   font-size: 18px; }
 
 #pie-de-pagina4 {
-  margin-top: 4rem;
+  margin-top: 0;
   font-size: 17px; }
 
 #pie-de-pagina5 {
-  margin-top: 4rem;
+  margin-top: 0;
   font-size: 18px; }
 
 .distancia-1 {
@@ -83,6 +89,19 @@ ul {
   margin-top: 1rem;
   margin-bottom: 2rem; }
 
+iframe {
+  margin-left: 2rem; }
+
+#oficinas {
+  margin-right: 0;
+  margin-left: 0.9px; }
+
+.encuesta {
+  margin-left: 2.5rem; }
+
+.derecha {
+  float: right; }
+
 .copyright {
   font-size: 20px;
   margin-top: 1.4rem;
@@ -97,32 +116,51 @@ ul {
 .grid {
   display: grid;
   grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-template-areas: "header header" "section img"; }
+  .grid .header {
+    grid-area: header; }
+  .grid .texto {
+    grid-area: section;
+    margin-right: 1rem; }
+  .grid .publicidad {
+    grid-area: img;
+    width: 100%;
+    height: 100%;
+    max-height: 45.063rem;
+    position: sticky;
+    top: 0;
+    max-width: 16rem; }
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: auto;
   grid-template-rows: 160px 59px;
   grid-template-areas: "logo nombre nombre" "eslogan eslogan buscador" "menu menu menu";
   justify-items: stretch;
   background: #020024;
   background: linear-gradient(0deg, #020024 0%, #090979 10%, #01eae0 90%, #00d4ff 100%); }
-  .grid img {
+  .menu-grid img {
     grid-area: logo;
     align-items: center;
     width: 190px;
     height: 190px; }
-  .grid h1 {
+  .menu-grid h1 {
     grid-area: nombre;
     justify-content: center;
     margin: 0;
     align-self: center;
     font-size: 27vh; }
-  .grid div nav {
+  .menu-grid div nav {
     grid-area: buscador;
     justify-content: center;
     margin: 0;
     align-self: right; }
-  .grid h2 {
+  .menu-grid h2 {
     grid-area: eslogan;
     font-size: 30px;
     margin-top: 29px; }
-  .grid nav {
+  .menu-grid nav {
     grid-area: menu; }
 
 .menu ul {
@@ -160,27 +198,34 @@ li {
 
 /*responsive*/
 @media (min-width: 240px) and (max-width: 575px) {
+  .grid {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: "header" "section"; }
+  .publicidad {
+    display: none; }
   .menu ul li + li {
     margin-left: 10vw; }
   .menu ul li {
     font-size: 6.4vw; }
-  .grid {
+  .menu-grid {
     grid-template-areas: "logo nombre nombre" "eslogan eslogan eslogan" "menu menu menu";
     grid-template-rows: auto; }
-    .grid h2 {
+    .menu-grid h2 {
       font-size: 8vw;
       margin-top: 0px; }
-    .grid .logo {
+    .menu-grid .logo {
       width: 45vw;
       height: 55vw; }
-    .grid h1 {
+    .menu-grid h1 {
       font-size: 12vw; }
-    .grid div {
+    .menu-grid div {
       display: none; }
   body {
     font-size: 6.3vw; }
   h3 {
-    font-size: 6.4vw; }
+    font-size: 6.7vw; }
   #pie-de-pagina1 {
     margin-top: 0;
     font-size: 3.5vw; }
@@ -190,6 +235,9 @@ li {
   #pie-de-pagina3 {
     margin-top: 0;
     font-size: 4vw; }
+  iframe {
+    width: 30rem;
+    height: 26rem; }
   #pie-de-pagina4 {
     margin-top: 5vw;
     font-size: 4vw; }
@@ -204,19 +252,25 @@ li {
     width: 30%; } }
 
 @media (min-width: 576px) and (max-width: 767px) {
+  .grid
+.publicidad {
+    max-width: 10.5rem;
+    float: right;
+    max-height: 33.063rem;
+    width: 145%; }
   .menu ul li + li {
     margin-left: 9%; }
   .menu ul li {
-    font-size: 2.5vw; }
-  .grid {
+    font-size: 2.7vw; }
+  .menu-grid {
     grid-template-rows: 160px auto; }
-    .grid h2 {
-      font-size: 3.2vw;
+    .menu-grid h2 {
+      font-size: 3.3vw;
       margin-top: 1px; }
-    .grid .logo {
+    .menu-grid .logo {
       width: 22vw;
       height: 30vh; }
-    .grid h1 {
+    .menu-grid h1 {
       font-size: 15vh; }
   .navbar {
     padding: 0px; }
@@ -226,6 +280,15 @@ li {
       margin: 0 !important; }
   .navbar-toggler {
     padding: 0px; }
+  iframe {
+    max-width: 20rem;
+    max-height: 20rem; }
+  .titulos {
+    max-width: 39rem; }
+  .notificaciones {
+    font-size: 3.7vh; }
+  h3 {
+    font-size: 1.45rem; }
   .form-inline .form-control {
     height: calc(1.2em + .7rem + 1.5px);
     width: 25vw; }
@@ -235,20 +298,24 @@ li {
     width: 20%; } }
 
 @media (min-width: 768px) and (max-width: 991px) {
+  .grid
+.publicidad {
+    max-width: 11.5rem;
+    float: right; }
   .menu ul li + li {
     margin-left: 9%; }
   .menu ul li {
     font-size: 2.5vw; }
-  .grid {
+  .menu-grid {
     grid-template-rows: auto auto; }
-    .grid h2 {
+    .menu-grid h2 {
       font-size: 3.25vw;
       margin-top: 18px;
       margin-bottom: 0; }
-    .grid .logo {
+    .menu-grid .logo {
       width: 170px;
       height: 170px; }
-    .grid h1 {
+    .menu-grid h1 {
       font-size: 13vw; }
   .navbar {
     padding: 0px; }
@@ -262,6 +329,13 @@ li {
     display: none; }
   .form-control {
     height: calc(1.2em + .7rem + 1.5px); }
+  .clase-para-los-p p {
+    font-size: 5vh; }
+  iframe {
+    max-width: 20rem;
+    max-height: 20rem; }
+  .titulos {
+    max-width: 39rem; }
   body {
     font-size: 4vh; } }
 
@@ -270,5 +344,7 @@ li {
     margin-left: 12%; }
   body {
     font-size: 2vw; }
-  .grid h1 {
+  .clase-para-los-p p {
+    font-size: 2.1vw; }
+  .menu-grid h1 {
     font-size: 14vw; } }
